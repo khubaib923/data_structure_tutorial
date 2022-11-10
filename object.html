@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object(Hash Table) in Javascript</title>
+    <script>
+        let obj={
+            "name":"khuabib",
+            "email":"khubaibirfan199@gmail.com",
+            "age":22,
+            "name":"uzair",
+            "getName":function(){
+                return this.name;
+            }
+        }
+        
+        // for(obj1 in obj){        //of loop:for iterate 
+        //     console.log(obj1);
+           
+        // }
+        console.log(Object.keys(obj));
+        console.log(Object.values(obj));
+        console.log(Object.entries(obj));
+      console.log("=======================");
+        obj.contacts="03232643537";
+        delete obj.age;
+        obj.name="altaf";
+        console.log(obj);
+        console.log(obj.getName());
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

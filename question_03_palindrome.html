@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check String are Palindrome or not</title>
+    <script>
+        let data = "level"
+        function palindrome(value) {
+            let start = 0;
+            let end = value.length - 1;
+            let result = true;
+            while (end > start) {
+                if (value[start] != value[end]) {
+                    result = false;
+                }
+
+
+                return result;
+
+                start++;
+                end--;
+            }
+
+        }
+
+        console.log(palindrome(data));
+
+
+    //    palindrome(data);
+    //    console.log(result);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

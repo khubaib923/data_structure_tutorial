@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map in Javascript</title>
+    <script>
+        let data=new Map([
+            ["name","khubaib"],
+            [true,"key"],
+            [100,"hundreed"],
+        ]);
+        data.set("age",100);
+        data.delete("name");
+        // console.log(data.size);
+        // console.log(data.get("name"));
+       // data.clear();
+    //    for(let map of data){
+    //     console.log(map);
+    //    }
+
+   data.forEach((value,key)=>{
+     console.log(key);
+   })
+
+        console.log(data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack through input</title>
+    <script>
+        let data = [];
+        let dataSize = data.length;
+        let maxSize = 5;
+
+        function pushElement() {
+            let value = document.getElementById("value").value;
+            if (maxSize > dataSize && value !== "") {
+                data[dataSize] = value;
+                dataSize++;
+                console.log("Element is added to the stack");
+                document.getElementById("value").value = "";
+            }
+            else if (value == "") {
+                console.log("Please enter the element");
+            }
+            else {
+                console.log("Stack is fulled");
+            }
+
+        }
+
+        function popElement() {
+            if (dataSize > 0) {
+                dataSize--;
+                data.length = dataSize;
+                console.log("Element is removed to the stack");
+            }
+            else {
+                console.log("No element present in the stack");
+            }
+        }
+
+        function displayElement() {
+            //console.log(data);
+
+            if (data.length == 0) {
+                console.log("Stack element is empty");
+            }
+            for (let i = 0; i < data.length; i++) {
+
+                console.log("Stack element no " + i + " and value is " + data[i]);
+
+
+            }
+
+        }
+    
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="value">
+    <button onclick="pushElement()">Add Element</button>
+    <button onclick="popElement()">Remove Element</button>
+    <button onclick="displayElement()">Display Array</button>
+
+</body>
+
+</html>

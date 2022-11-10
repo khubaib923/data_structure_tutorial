@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Strins are Anagram</title>
+    <script>
+        function checkAnagram(str1,str2){
+          let objStr1={};
+          if(str1.length!==str2.length){
+           return false;
+          }
+          for(let ch of str1){
+          objStr1[ch] = (objStr1[ch] || 0) +1 
+           }
+
+           for(let ch of str2){
+          //  console.log(objStr1[ch]);
+           if(!objStr1[ch]){
+            return false;
+           }
+          
+            objStr1[ch]--
+          }
+
+          return true;
+        
+         
+         
+         
+          //  console.log(objStr1);
+
+        }
+
+        console.log(checkAnagram("heloo","llloh"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+

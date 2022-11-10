@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets in Html</title>
+    <script>
+        let data = new Set(["khubaib", "uzair", "altaf", "uzair"]);
+        //let array=["khubaib","uzair","altaf","uzair"];
+        //console.log(array);
+
+        data.add("hussain");
+        //data.add("khubaib");
+        data.delete("khubaib");
+        //data.clear();
+        for (let x of data) {
+            console.log(x);
+        }
+
+        data.forEach((value) => {
+            console.log(value);
+        })
+
+
+
+        console.log(data.keys());
+        console.log(data.values());
+        console.log(data.entries());
+        console.log(data);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

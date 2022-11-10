@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Array</title>
+    <script>
+        //         let data=[23,34,45,67,89,9];
+        //         console.log(data);
+        //         let position=2;
+        //         for(let i=position;i<data.length;i++){
+        //          data[i]=data[i+1];
+        //      }
+        //      data.length=data.length-1;
+
+        // console.log(data);
+
+
+        function deleteElemet() {
+            let data = [23, 34, 45, 67, 89, 9];
+            console.log(data);
+            let position = Number(document.getElementById("position").value);
+            if (data.length > position && position>=0) {
+                for (let i = position; i < data.length; i++) {
+                    data[i] = data[i + 1];
+                }
+                data.length = data.length - 1;
+
+                console.log(data);
+
+            }
+            else{
+                console.log("Please correct input position");
+            }
+        }
+        console.log("=========================");
+        let spliceData=[3,2,4,5,6,7,8];
+        console.log(spliceData);
+        spliceData.splice(2,1);
+        console.log(spliceData);
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position">
+    <button onclick="deleteElemet()">Delete Element</button>
+
+</body>
+
+</html>

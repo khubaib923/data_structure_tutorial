@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Searching</title>
+    <script>
+        //&(n)=O(N)==>Searching:Big O Notation
+        //&(n)=O(N"2)==>Sorting:Big O Notation
+
+        // let data=[1,4,5,6,79,8,90];
+        // let pos=undefined;
+        // let search=79;
+        // for(let i=0;i<data.length;i++){
+        //     if(data[i]==search){
+        //     pos=i;
+        //     break;
+        //     }
+          
+        // };
+        // if(pos==undefined){
+        //     console.log("item is not present in the list");
+        // }
+
+        // else{
+        //     console.log(pos);
+        // }
+
+        function search(){
+        let data=[1,4,5,6,79,8,90];
+        let pos=undefined;
+        let search=document.getElementById("item").value;
+        for(let i=0;i<data.length;i++){
+            if(data[i]==search){
+            pos=i;
+            break;
+            }
+          
+        };
+        if(pos==undefined){
+            console.log("item is not present in the list");
+        }
+
+        else{
+            console.log(pos);
+        }
+        }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="item">
+    <button onclick="search()">Search Element</button>
+    
+</body>
+</html>

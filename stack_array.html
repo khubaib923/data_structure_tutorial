@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack In Array</title>
+    <script>
+
+        //push,pop,isEmpty,peak
+
+        let data=[];//non-primitive type:array is best for stack and quee.
+        let currentSize=data.length;
+        let maxSize=5;
+
+        function push(value){
+            if(currentSize<maxSize){
+
+
+                data[currentSize]=value;
+          //console.log(currentSize);
+          currentSize+=1
+            }
+          
+          else{
+            alert("stack is full you can not add" + " " +value);
+          }
+}
+
+     function pop(){
+
+        if(currentSize>0){
+
+            currentSize--;
+            data.length=currentSize;
+
+
+        }
+        else{
+            alert("Stack is already empty");
+        }
+     }
+        push(20);
+        push(22);
+        push(24);
+        push(25);
+        pop();
+        pop();
+        pop();
+        pop();
+    
+         push(80);
+         push(89);
+       console.log(data);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

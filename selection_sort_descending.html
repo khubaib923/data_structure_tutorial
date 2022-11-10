@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort Descending</title>
+    <script>
+        //First Method
+        // let data=[3,2,6,67,45,1,5,54,1,2,45,54];
+        // let min;
+
+
+        // function sorted(data){
+        //     for(let i=0;i<data.length;i++){
+        //         min=i;
+        //         for(let j=i+1;j<data.length;j++){
+        //             if(data[min]<data[j]){
+        //                 min=j;
+
+        //             }
+
+        //         }
+
+        //         let temp=data[min];
+        //         data[min]=data[i];
+        //         data[i]=temp;
+
+
+
+        //     }
+
+        // }
+
+        // sorted(data);
+        // console.log(data);
+
+
+        //Second Method
+
+        let data=[3,2,6,67,45,1,5,54,1,2,45,54];
+        let min;
+
+
+        function sorted(data){
+            for(let i=data.length-1;i>=0;i--){
+                min=i;
+                for(let j=i-1;j>=0;j--){
+                    if(data[min]>data[j]){
+                        min=j;
+
+                    }
+
+                }
+
+                let temp=data[min];
+                data[min]=data[i];
+                data[i]=temp;
+
+
+
+            }
+
+        }
+
+        sorted(data);
+        console.log(data);
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

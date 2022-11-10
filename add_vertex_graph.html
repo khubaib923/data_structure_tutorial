@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vertex in graph</title>
+    <script>
+        class Graph{
+            constructor(){
+                this.data={};
+            }
+            addVertex(vertex){
+                if(!this.data[vertex]){
+                    this.data[vertex]=[];
+                }
+            }
+        }
+        const graph=new Graph();
+        graph.addVertex("a");
+        graph.addVertex("b");
+        graph.addVertex("c");
+        graph.addVertex("d");
+        console.log(graph.data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

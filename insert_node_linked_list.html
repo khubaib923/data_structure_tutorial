@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List</title>
+    <script>
+        class List {
+
+            constructor(data) {
+                this.head = {
+                    value: data,
+                    next: null
+                }
+                this.tail = this.head;
+                this.size = 1;
+            }
+
+            appendNode(apppendData) {
+
+                let newNode = {
+                    value: apppendData,
+                    next: null
+                }
+                this.tail.next = newNode;
+                this.tail = newNode;
+                this.size++;
+            }
+
+            insertNode(index,value){
+                let counter=1;
+                let currentNode=this.head;
+                while(counter<index){
+                    counter++;
+                    currentNode=currentNode.next;
+                }
+                let nextNode=currentNode.next;
+                currentNode.next={
+                    value:value,
+                    next:nextNode,
+                }
+
+            }
+        }
+
+        let list = new List(200);
+        list.appendNode(300);
+        list.appendNode(400);
+        list.insertNode(3,2000);
+        console.log(list);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

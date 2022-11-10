@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Recursion</title>
+    <script>
+        let data=[1,4,7,9,50,80,90];//always work sorted array
+        let start=0;
+        let end=data.length-1;
+        let position=undefined;
+        let find=2;
+        
+         function binarySearch(data,start,end){
+            let mid=Math.floor((start+end)/2);
+           if(start<=end){
+            if(data[mid]===find){
+                position=mid;
+                return;
+            }
+            else if(data[mid]>find){
+               binarySearch(data,start,mid-1)
+
+            }
+            else{
+                binarySearch(data,mid+1,end);
+            
+            }
+           }
+
+         }
+
+         binarySearch(data,start,end);
+          if(position==undefined){
+            console.log("Item is not present in the array");
+          }
+          else{
+            console.log(position);
+          }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

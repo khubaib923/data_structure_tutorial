@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting Array</title>
+    <script>
+        // let data=[60,30,10,67,40];
+        // let newElement=70;
+        // let position=2;
+        // console.log(data);
+        // for(let i=data.length-1;i>=0;i--){
+        //     //console.log(data[i]);
+        //     if(i>=position){
+        //         data[i+1]=data[i];
+        //         if(i==position){
+        //             data[i]=newElement;
+
+        //         }
+        //     }
+
+        // }
+        // console.log(data);
+
+
+       function insertData(){
+        let data=[60,30,10,67,40];
+        console.log(data);
+        let newElement=document.getElementById("newElement").value;
+        let position=document.getElementById("position").value;
+      
+        if(position<=data.length-1 && position>0){
+            for(let i=data.length-1;i>=0;i--){
+            //console.log(data[i]);
+            if(i>=position){
+                data[i+1]=data[i];
+                if(i==position){
+                    data[i]=newElement;
+
+                }
+            }
+
+        }
+        console.log(data);
+        }
+        else{
+            console.log("Please correct data length");
+        }
+        }
+         console.log("=====================");
+         let element=[3,4,6,5,7,8];
+         console.log(element);
+         element.splice(1,1,8);
+         console.log(element);
+        
+
+    </script>
+</head>
+<body>
+    <input type="text" id="newElement">
+    <input type="text" id="position">
+    <button onclick="insertData()">Insert Element</button>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching Array</title>
+    <script>
+         let data=[2,3,4,56,78,88,56,78];
+
+        // let item=56;
+        // let searchingData=[];
+        // for(let i=0;i<data.length;i++){
+        //     //console.log(data[i]);
+        //     if(data[i]===item){
+        //         console.log(i);
+        //         searchingData.push(i);
+        //         continue;
+        //     }
+        // }
+        // console.log(searchingData);
+
+
+        console.log("=======================");
+        console.log(data.lastIndexOf(56));
+        console.log(data.indexOf(56));
+        console.log("=======================");
+
+        function searchElement() {
+            let data = [2, 3, 4, 56, 78, 88, 56, 78,88,78];
+
+            let item = Number(document.getElementById("position").value);
+            let searchingData = [];
+            for (let i = 0; i < data.length; i++) {
+                //console.log(data[i]);
+                if (data[i] === item) {
+                    console.log(i);
+                    searchingData.push(i);
+                    continue;
+                }
+                
+            }
+            console.log(searchingData);
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="position" placeholder="enter value">
+    <button onclick="searchElement()">Search Element</button>
+</body>
+
+</html>

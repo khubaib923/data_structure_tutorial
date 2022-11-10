@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack with class push and pop</title>
+</head>
+
+<body>
+    <script>
+
+        class Stack {
+            item=[];
+            currentSize;
+            maxSize;
+
+            constructor(size) {
+                // console.log("stack is worked");
+                this.maxSize=size;
+                this.currentSize=this.item.length;
+
+            }
+
+            push(value) {
+               
+               
+             if(this.maxSize>this.currentSize){
+                this.item[this.currentSize]  =value;
+              ++this.currentSize;
+             }
+           else{
+            console.log("Stack is fulled");
+           }
+
+
+            }
+
+            pop() {
+                if(this.currentSize>0){
+                    let lastElement=this.item[this.currentSize-1];
+                    this.currentSize--;
+                this.item.length=this.currentSize;
+                return lastElement;
+                }
+              else{
+              console.log("Stack is already empty");  
+                              
+
+              }
+
+
+            }
+
+           reverseString(array){
+            for(let i=0;i<array.length;i++){
+                this.push(array[i]);
+            }
+
+            for(let i=0;i<array.length;i++){
+               array[i]=this.pop();
+            }
+           
+
+           }
+
+
+            display() {
+                console.log(this.item);
+
+            }
+
+
+        }
+
+        stack = new Stack(5);
+        //  stack.push(40);
+        //  stack.push(56);
+        //stack.display();
+       let str="altaf";
+       str=str.split("");
+       console.log(str);
+       stack.reverseString(str);
+       console.log(str);
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked List</title>
+    <script>
+        class List {
+
+            constructor(data) {
+                this.head = {
+                    value: data,
+                    next: null
+                }
+                this.tail = this.head;
+                this.size=1;
+            }
+
+            appendNode(apppendData) {
+
+                let newNode={
+                    value:apppendData,
+                    next:null
+                }
+                this.tail.next=newNode;
+                this.tail=newNode;
+                this.size++;
+
+
+
+            }
+        }
+
+        let list = new List(200);
+        list.appendNode(300);
+        list.appendNode(400);
+        console.log(list);
+
+        // let x={name:"khubaib"}; //by refrence value change due to memory..copy
+        // let y=x;
+        // //x={name:"altaf"};
+        // x.name="altaf"
+        // console.log(y);
+
+        // let x={name:"khubaib"}; //by refrence value change due to memory..copy
+        // let y=x;
+        // y.name="altaf";
+        // console.log(x);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

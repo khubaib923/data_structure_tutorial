@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue with Forward and Rear Input</title>
+
+    <script>
+        let data = [];
+        let currentSize = data.length;
+        let maxSize = 5;
+
+        function enqueue() {
+            let newValue=document.getElementById("key").value;
+            if (maxSize > currentSize) {
+                data[currentSize] = newValue;
+                currentSize++;
+
+            }
+            
+            else {
+                console.log("Size condition is fulled");
+            }
+            document.getElementById("key").value="";
+        }
+
+        function dequeue() {
+            if (currentSizeCheck()) {
+                for (let i = 0; i < data.length; i++) {
+                    data[i] = data[i + 1];
+                }
+                currentSize--;
+                data.length = currentSize;
+            }
+            else {
+                console.log("Queue is already empty");
+            }
+
+        }
+
+        function forwardQueue() {  //jo phele aata hain queue main
+
+            if(currentSizeCheck()){
+                console.log(data[0])
+            }
+            else{
+                console.log("Queue is empty");
+            }
+        }
+
+        function rearQueue() {  //jo bad mai aata hain queue main
+            if(currentSizeCheck()){
+                console.log(data[currentSize - 1]);
+            }
+            else{
+                console.log("Queue is empty");
+            }
+
+
+        }
+        function display() {
+            console.log(data);
+
+        }
+
+ //jab condition main ek chez bar bar used hu rha hain tw iska function bna lete hain.
+        function currentSizeCheck(){
+            if(currentSize>0){
+               return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        // enqueue();
+        // display();
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <input type="text" placeholder="number" id="key">
+    <button onclick="enqueue()">Add Element</button>
+    <button onclick="dequeue()">Remove Element</button>
+    <button onclick="forwardQueue()">Front Element</button>
+    <button onclick="rearQueue()">Rear Element</button>
+    <button onclick="display()">Display Element</button>
+
+
+
+</body>
+
+</html>

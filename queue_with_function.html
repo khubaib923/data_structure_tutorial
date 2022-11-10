@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue with Function</title>
+</head>
+<body>
+    <script>
+        //Queue:FIFO   && Stack :LIFO
+        let data=[];
+        let currentSize=data.length;
+        let maxSize=5;
+
+        function enqueue(value){
+          if(maxSize>currentSize){
+            data[currentSize]=value;
+            currentSize++;
+          }
+          else{
+            console.log("Queue is already fulled");
+          }
+
+
+        }
+        function dequeue(){
+         
+           if(currentSize>0){
+            for(let i=0;i<data.length;i++){
+                data[i]=data[i+1];
+
+}
+             currentSize--;
+             data.length=currentSize;
+           }
+           else{
+            console.log("Queue is already empty");
+           }
+
+        }
+
+        function display(){
+            console.log(data);
+
+        }
+
+        enqueue(5);
+        display();
+
+    </script>
+    
+</body>
+</html>

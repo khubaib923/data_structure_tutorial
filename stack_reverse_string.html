@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse String with Stack</title>
+    <script>
+        let data = [];
+        let currentSize = data.length;
+
+
+        function push(value) {
+            data[currentSize] = value;
+            currentSize++;
+
+
+        }
+        function pop() {
+            let lastElement = data[currentSize - 1];
+            currentSize--;
+            data.length = currentSize;
+            return lastElement;
+        }
+
+        function reverseElement(array) {
+            //console.log(array);
+            for (let i = 0; i < array.length; i++) {
+                push(array[i]);
+            }
+
+            
+            for (let i = 0; i < array.length; i++) {
+                //console.log(pop());
+                array[i]=pop()
+            }
+
+
+        }
+
+        let str = "khubaib";
+        str = str.split("");
+        reverseElement(str);
+        console.log(str.join(""));
+
+
+        //console.log(data);
+
+
+        // console.log("============================");
+
+        // function arrayFunction(arrayElements) {
+        //     arrayElements[0] = 300;
+        // }
+
+
+        // let arrayElement = [20];
+        // arrayFunction(arrayElement);
+
+
+        // console.log(arrayElement);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

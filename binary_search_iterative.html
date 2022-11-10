@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search Iterative</title>
+    <script>
+        let data=[1,2,36,90,890,900];
+        let position=undefined;
+        let start=0;
+        let end=data.length-1;
+        let search=890;
+
+        while(start<=end){
+   
+       let mid=Math.floor((start+end)/2);
+      // console.log(mid);
+       if(data[mid]===search){
+        position=mid;
+        break;
+        
+
+       }
+       else if(data[mid]>search){
+          end=mid-1;
+
+
+       }
+
+       else{
+        start=mid+1;
+       }
+
+        }
+
+        if(!position){
+            console.log("data is not present in the array");
+        }
+    else{
+        console.log(`${position} is ${data[position]}`);
+    }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
